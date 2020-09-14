@@ -1,0 +1,8 @@
+node_modules
+lib
+.npmrc
+coverage
+waiter.config.js
+build/bin/algolia-key.js
+extend/project/*
+jest.config-copy.js

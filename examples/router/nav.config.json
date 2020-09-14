@@ -1,0 +1,16 @@
+{
+ "zn": {
+   "home": "page/home",
+   "docs": "page/docs",
+   "guild": "page/guild",
+   "api": "page/api",
+   "extend": "extend"
+ },
+ "en": {
+  "home": "page/home",
+  "docs": "page/docs",
+  "guild": "page/guild",
+  "api": "page/api",
+  "extend": "extend"
+ }
+}
