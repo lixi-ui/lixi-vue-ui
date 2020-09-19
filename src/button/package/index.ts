@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import myButton from './index.vue';
+import myButton from './index11';
 const App = Vue.component('app', {
   data() {
     return {

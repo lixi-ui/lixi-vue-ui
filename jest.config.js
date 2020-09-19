@@ -1,6 +1,5 @@
 module.exports = {
   collectCoverage: false,
-  coverageProvider: "v8",
   roots: [
     "<rootDir>/src"
   ],
@@ -11,6 +10,7 @@ module.exports = {
   ],
   "moduleFileExtensions": [
     "js",
+    "ts",
     "json",
     // 告诉 Jest 处理 `*.vue` 文件
     "vue"
@@ -18,6 +18,7 @@ module.exports = {
   "transform": {
     // 用 `vue-jest` 处理 `*.vue` 文件
     ".*\\.(vue)$": "vue-jest",
-    "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    "^.+\\.tsx?$": 'ts-jest',
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
   }
 };
