@@ -1,5 +1,4 @@
 module.exports = {
-  collectCoverage: false,
   roots: [
     "<rootDir>/src"
   ],
@@ -18,7 +17,6 @@ module.exports = {
   "transform": {
     // 用 `vue-jest` 处理 `*.vue` 文件
     ".*\\.(vue)$": "vue-jest",
-    "^.+\\.tsx?$": 'ts-jest',
-    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    '\\.(js|jsx|ts|tsx)$': 'babel-jest'
   }
 };
