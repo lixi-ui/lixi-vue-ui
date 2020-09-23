@@ -1,19 +1,19 @@
-import App from "app.vue";
+import App from "./app.vue";
 import Vue from "vue";
-import router from "vue-router";
+// import router from "vue-router";
 
 
-import routerConf from "./router/index.js";
-import compoment from "./compoment/index.js";
-import Store from "./store/index.js";
+// import routerConf from "./router/index.js";
+// import compoment from "./compoment/index.js";
+// import Store from "./store/index.js";
 
 
-router(routerConf);
+// router(routerConf);
 
-vue.use(compoment);
+// vue.use(compoment);
+// router,
+// Store
 
 new Vue({
-  App,
-  router,
-  Store
+  App
 })
