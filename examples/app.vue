@@ -1,6 +1,7 @@
 <template>
-  <div>
-    首页
+  <div id="app">
+    首页1
+    <lxv-button></lxv-button>
   </div>
 </template>
 

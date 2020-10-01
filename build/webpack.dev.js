@@ -38,7 +38,6 @@ var config = {
           preserveWhitespace: false
         }
       }
-      
     ]
   },
   plugins: [

@@ -1,17 +1,8 @@
-import Vue from 'vue';
-import myButton from './index11';
-const App = Vue.component('app', {
-  data() {
-    return {
-      msg: 'Hello Vue Test Utils'
-    }
-  },
-  components: {
-    myButton
-  },
-  template: `
-    <div><myButton></myButton>{{ msg }}</div>
+import LxvButton from './index.vue';
 
-  `
-})
-export default App;
+/* istanbul ignore next */
+LxvButton.install = function(Vue) {
+  Vue.component(LxvButton.name, LxvButton);
+};
+
+export default LxvButton;

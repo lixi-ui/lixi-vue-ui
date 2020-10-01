@@ -1,5 +1,5 @@
-import App from "./app.vue";
 import Vue from "vue";
+import App from "./app.vue";
 // import router from "vue-router";
 
 
@@ -14,6 +14,14 @@ import Vue from "vue";
 // router,
 // Store
 
+import Lxv from "../src/index.js";
+
+console.log(Lxv);
+
+Vue.use(Lxv);
+
 new Vue({
-  App
-})
+  // render: h => h(App),
+  el: "#app",
+  render: function(h) { return h(App); },
+});
