@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
+  let a: number = 1;
   export default {
     name: "lxv-button",
     data(){
-      console.log('------------------------>');
       return {
         name: "button-->"
       }

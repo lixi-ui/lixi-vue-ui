@@ -27,9 +27,19 @@ var config = {
   module: {
     rules:[
       {
-        test: /\.(jsx?|babel|es6)$/,
+        test: /\.(jsx?|babel|es6|tsx?)$/,
         include: process.cwd(),
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets:[
+            [
+              '@babel/preset-typescript',
+              {
+                allExtensions: true
+              }
+            ]
+          ]
+        }
       },
       {
         test: /\.vue$/,
@@ -37,6 +47,12 @@ var config = {
         options: {
           preserveWhitespace: false
         }
+      },
+      {
+        test: /\.md/,
+        use: [{
+          loader: path.resolve(__dirname, './md-loader/index.js')
+        }]
       }
     ]
   },
