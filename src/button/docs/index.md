@@ -1,6 +1,13 @@
-## button 组件
+<template>
+  <div>
+    md---<
+    <!-- <demo-a></demo-a> -->
+    <demo-button></demo-button>
+  </div>
+</template>
 
-:::demo
-  <demo src="/demo/index.vue">
-  </demo>
-:::
+<script>
+  export default {
+   name: "md-dome"
+  }
+</script>

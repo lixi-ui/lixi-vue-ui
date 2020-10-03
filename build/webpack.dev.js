@@ -16,7 +16,11 @@ var config = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    modules: ['node_modules']
+    modules: ['node_modules'],
+    alias: {
+      'src': path.join(__dirname,'../src',
+      ),
+    }
   },
   devServer: {
     host: '0.0.0.0',
@@ -50,9 +54,19 @@ var config = {
       },
       {
         test: /\.md/,
-        use: [{
-          loader: path.resolve(__dirname, './md-loader/index.js')
-        }]
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
+          }
+        ]
       }
     ]
   },

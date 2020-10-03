@@ -1,7 +1,4 @@
-module.exports = function(source) { 
-  return `
-    <template>
-      <div>1234567</div>
-    </template>
-  `;
+module.exports = function(source) {
+  console.log("source--->", source);
+  return source;
 }

@@ -1,5 +1,7 @@
 import Vue from "vue";
 import App from "./app.vue";
+
+import dome from "./compoment/demo.vue";
 // import router from "vue-router";
 
 
@@ -19,9 +21,10 @@ import Lxv from "../src/index.js";
 console.log(Lxv);
 
 Vue.use(Lxv);
+Vue.component(dome.name, dome);
 
 new Vue({
   // render: h => h(App),
   el: "#app",
-  render: function(h) { return h(App); },
+  render: function(h) { return h(App); }
 });
