@@ -1,13 +1,24 @@
 import nav from "nav.config.json";
+import home from "../page/home.vue";
+import component from "../page/component.vue";
 
-var routerObj = []
-for(var i = 0;i < nav.length; i++){
-  var obj = {}
-  obj.name = nav[i].name;
-  obj.path = nav[i].path;
-  obj.compoment = nav[i].component;
-  obj.mate = nav.mate;
-  routerObj.push(obj)
-}
+var routers = [
+  {
+    name: "home",
+    path: "/home",
+    component: home,
+    mate:{
+      title: "lixi-home"
+    }
+  },
+  {
+    name: "component",
+    path: "/component",
+    component: component,
+    mate:{
+      title: "lixi-component"
+    }
+  }
+]
 
-return routerObj;
+export default routers;

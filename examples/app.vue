@@ -1,9 +1,14 @@
 <template>
   <div id="app">
-    首页1
-    <lxv-button></lxv-button>
-    <my-button></my-button>
-    <demo></demo>
+    <div class="heard-nav" style="display: flex;">
+      首页1
+      <lxv-button></lxv-button>
+      <my-button></my-button>
+      <demo></demo>
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

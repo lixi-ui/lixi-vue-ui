@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
+  mode: "development",
   entry: {
     docs: path.resolve(process.cwd(), "./examples/main.js") 
   },
