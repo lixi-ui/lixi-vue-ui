@@ -10,7 +10,7 @@
     name: "lxv-button",
     data(){
       return {
-        name: "button-->"
+        name: "我是组件button"
       }
     }
   }

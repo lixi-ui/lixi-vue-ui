@@ -6,14 +6,34 @@ const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
   mode: "development",
+  // entry: {
+  //   docs: path.resolve(process.cwd(), "./examples/main.js") 
+  // },
+  // output: {
+  //   path: path.resolve(process.cwd(), './examples/lixi-ui/'),
+  //   publicPath: '',
+  //   filename: '[name].js',
+  //   chunkFilename: '[name].js'
+  // },
   entry: {
-    docs: path.resolve(process.cwd(), "./examples/main.js") 
+    app: ['./src/index.js']
   },
   output: {
-    path: path.resolve(process.cwd(), './examples/lixi-ui/'),
-    publicPath: '',
-    filename: '[name].js',
-    chunkFilename: '[name].js'
+    path: path.resolve(process.cwd(), './lib'),
+    publicPath: '/dist/',
+    filename: 'index.js',
+    chunkFilename: '[id].js',
+    libraryTarget: 'umd',
+    library: 'LIXI',
+    umdNamedDefine: true
+  },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -72,19 +92,24 @@ var config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './examples/index.html',
-      filename: './index.html',
-      favicon: './examples/lixi-logo.png'
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './examples/index.html',
+    //   filename: './index.html',
+    //   favicon: './examples/lixi-logo.png'
+    // }),
     new VueLoaderPlugins()
   ]
 }
 
-var server = new webpackDevServer(webpack(config));
+// var server = new webpackDevServer(webpack(config));
 
-server.listen(8888, 'localhost', (err) => {
-  if (err) {
-    console.log(err);
-  }
+// server.listen(8888, 'localhost', (err) => {
+//   if (err) {
+//     console.log(err);
+//   }
+// });
+
+webpack(config,function(err,res){
+  // console.log("err", err);
+  // console.log("res", res);
 });

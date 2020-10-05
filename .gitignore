@@ -6,3 +6,4 @@ waiter.config.js
 build/bin/algolia-key.js
 extend/project/*
 jest.config-copy.js
+examples/lixi-ui
