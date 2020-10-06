@@ -15,25 +15,35 @@ var config = {
   //   filename: '[name].js',
   //   chunkFilename: '[name].js'
   // },
+  // entry: {
+  //   app: ['./src/index.js']
+  // },
+  // output: {
+  //   path: path.resolve(process.cwd(), './lib'),
+  //   publicPath: '/dist/',
+  //   filename: 'index.js',
+  //   chunkFilename: '[id].js',
+  //   libraryTarget: 'umd',
+  //   library: 'LIXI',
+  //   umdNamedDefine: true
+  // },
+  // externals: {
+  //   vue: {
+  //     root: 'Vue',
+  //     commonjs: 'vue',
+  //     commonjs2: 'vue',
+  //     amd: 'vue'
+  //   }
+  // },
   entry: {
     app: ['./src/index.js']
   },
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
-    filename: 'index.js',
+    filename: 'lixi-ui.common.js',
     chunkFilename: '[id].js',
-    libraryTarget: 'umd',
-    library: 'LIXI',
-    umdNamedDefine: true
-  },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
+    libraryTarget: 'commonjs2'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
