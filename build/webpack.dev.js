@@ -6,15 +6,15 @@ const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
   mode: "development",
-  // entry: {
-  //   docs: path.resolve(process.cwd(), "./examples/main.js") 
-  // },
-  // output: {
-  //   path: path.resolve(process.cwd(), './examples/lixi-ui/'),
-  //   publicPath: '',
-  //   filename: '[name].js',
-  //   chunkFilename: '[name].js'
-  // },
+  entry: {
+    docs: path.resolve(process.cwd(), "./examples/main.js") 
+  },
+  output: {
+    path: path.resolve(process.cwd(), './examples/lixi-ui/'),
+    publicPath: '',
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
   // entry: {
   //   app: ['./src/index.js']
   // },
@@ -35,16 +35,16 @@ var config = {
   //     amd: 'vue'
   //   }
   // },
-  entry: {
-    app: ['./src/index.js']
-  },
-  output: {
-    path: path.resolve(process.cwd(), './lib'),
-    publicPath: '/dist/',
-    filename: 'lixi-ui.common.js',
-    chunkFilename: '[id].js',
-    libraryTarget: 'commonjs2'
-  },
+  // entry: {
+  //   app: ['./src/index.js']
+  // },
+  // output: {
+  //   path: path.resolve(process.cwd(), './lib'),
+  //   publicPath: '/dist/',
+  //   filename: 'lixi-ui.common.js',
+  //   chunkFilename: '[id].js',
+  //   libraryTarget: 'commonjs2'
+  // },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules'],
@@ -102,24 +102,24 @@ var config = {
     ]
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: './examples/index.html',
-    //   filename: './index.html',
-    //   favicon: './examples/lixi-logo.png'
-    // }),
+    new HtmlWebpackPlugin({
+      template: './examples/index.html',
+      filename: './index.html',
+      favicon: './examples/lixi-logo.png'
+    }),
     new VueLoaderPlugins()
   ]
 }
 
-// var server = new webpackDevServer(webpack(config));
+var server = new webpackDevServer(webpack(config));
 
-// server.listen(8888, 'localhost', (err) => {
-//   if (err) {
-//     console.log(err);
-//   }
-// });
-
-webpack(config,function(err,res){
-  // console.log("err", err);
-  // console.log("res", res);
+server.listen(8888, 'localhost', (err) => {
+  if (err) {
+    console.log(err);
+  }
 });
+
+// webpack(config,function(err,res){
+//   // console.log("err", err);
+//   // console.log("res", res);
+// });
