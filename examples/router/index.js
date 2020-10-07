@@ -1,6 +1,6 @@
 import nav from "nav.config.json";
-import home from "../page/home.vue";
-import component from "../page/component.vue";
+import home from "../pages/home.vue";
+import component from "../pages/component.vue";
 
 var routers = [
   {

@@ -105,7 +105,7 @@ var config = {
     new HtmlWebpackPlugin({
       template: './examples/index.html',
       filename: './index.html',
-      favicon: './examples/lixi-logo.png'
+      favicon: './examples/assets/images/lixi-logo.png'
     }),
     new VueLoaderPlugins()
   ]

@@ -1,11 +1,12 @@
 <template>
   <div>
-    <span>{{ name }}</span>
+    <span>
+      <slot></slot>
+    </span>
   </div>
 </template>
 
 <script lang="ts">
-  let a: number = 1;
   export default {
     name: "lxv-button",
     data(){

@@ -3,7 +3,7 @@ import App from "./app.vue";
 
 import VueRouter from 'vue-router';
 import routes from './router/index.js';
-import dome from "./compoment/demo.vue";
+import dome from "./compoments/demo.vue";
 
 
 import Lxv from "../src/index.js";
