@@ -1,11 +1,12 @@
 {
   "name": "my-jest",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "dev": "node ./build/webpack.dev.js"
+    "dev": "node ./build/webpack.dev.js",
+    "server": "node ./server/bin/www"
   },
   "author": "",
   "license": "ISC",
@@ -18,11 +19,13 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
+    "cookie-parser": "^1.4.5",
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.4.2",
     "jest-serializer-vue": "^2.0.2",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
+    "morgan": "^1.10.0",
     "ts-jest": "^26.3.0",
     "vue": "^2.6.12",
     "vue-jest": "^3.0.6",
