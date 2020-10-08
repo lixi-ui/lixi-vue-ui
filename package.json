@@ -1,15 +1,26 @@
 {
-  "name": "my-jest",
+  "name": "lixi-vue-ui",
   "version": "0.0.1",
-  "description": "",
-  "main": "lib/index.js",
+  "description": "A Component Library for Vue.js.",
+  "main": "lib/lixi-ui.common.js",
+  "files": [
+    "lib",
+    "src",
+    "packages",
+    "types"
+  ],
   "scripts": {
     "test": "jest",
     "dev": "node ./build/webpack.dev.js",
     "server": "node ./server/bin/www"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "lingniker",
+  "keywords": [
+    "lixi",
+    "vue",
+    "ui"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-typescript": "^7.10.4",
