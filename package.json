@@ -12,7 +12,9 @@
   "scripts": {
     "test": "jest",
     "dev": "node ./build/webpack.dev.js",
-    "server": "node ./server/bin/www"
+    "server": "node ./server/bin/www",
+    "prod": "node ./build/webpack.prod.js",
+    "analyzer": "node ./build/webpack.prod.js"
   },
   "author": "lingniker",
   "keywords": [
@@ -44,6 +46,7 @@
     "vue-router": "^3.4.5",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^3.9.0",
     "webpack-dev-server": "^3.11.0"
   }
 }

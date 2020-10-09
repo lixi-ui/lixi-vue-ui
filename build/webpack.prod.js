@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var config = {
   mode: "development",
@@ -14,36 +15,6 @@ var config = {
     filename: '[name].js',
     chunkFilename: '[name].js'
   },
-  // entry: {
-  //   app: ['./src/index.js']
-  // },
-  // output: {
-  //   path: path.resolve(process.cwd(), './lib'),
-  //   publicPath: '/dist/',
-  //   filename: 'index.js',
-  //   chunkFilename: '[id].js',
-  //   libraryTarget: 'umd',
-  //   library: 'LIXI',
-  //   umdNamedDefine: true
-  // },
-  // externals: {
-  //   vue: {
-  //     root: 'Vue',
-  //     commonjs: 'vue',
-  //     commonjs2: 'vue',
-  //     amd: 'vue'
-  //   }
-  // },
-  // entry: {
-  //   app: ['./src/index.js']
-  // },
-  // output: {
-  //   path: path.resolve(process.cwd(), './lib'),
-  //   publicPath: '/dist/',
-  //   filename: 'lixi-ui.common.js',
-  //   chunkFilename: '[id].js',
-  //   libraryTarget: 'commonjs2'
-  // },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules'],
@@ -51,12 +22,6 @@ var config = {
       'src': path.join(__dirname,'../src',
       ),
     }
-  },
-  devServer: {
-    host: '0.0.0.0',
-    port: 8888,
-    publicPath: '/',
-    noInfo: true
   },
   module: {
     rules:[
@@ -106,12 +71,13 @@ var config = {
       filename: './index.html',
       favicon: './examples/assets/images/lixi-logo.png'
     }),
-    new VueLoaderPlugins()
+    new VueLoaderPlugins(),
+    // new BundleAnalyzerPlugin()
   ]
 }
 
 
 webpack(config,function(err,res){
-  // console.log("err", err);
+  console.log("成功");
   // console.log("res", res);
 });

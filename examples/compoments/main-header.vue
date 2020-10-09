@@ -1,14 +1,12 @@
 <template>
   <div class='main-header'>
     <div class="main-nav-left">
-      <img src="../assets/lixi-logo.png"/>
+      <img src="../assets/images/lixi-logo.png"/>
       Lixi.js
     </div>
     <div class="main-nav-right">
       <div class="nav-right">
         <div class="nav-right-wrap">
-
-
           <div class="nav-item" v-for="(item,index) in navAll" :key="index">
             <span v-if="!item.children">
               <router-link
