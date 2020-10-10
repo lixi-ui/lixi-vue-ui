@@ -2,10 +2,13 @@
   <div id="app">
     <div class="heard-nav">
       <div class="">
-        <lvx-button>
-          按钮
-        </lvx-button>
+        <main-header></main-header>
       </div>
+    </div>
+    <div style="padding-top: 50px">
+      <lxv-button>
+        btn
+      </lxv-button>
     </div>
     <div>
       <router-view></router-view>

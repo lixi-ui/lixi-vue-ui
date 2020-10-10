@@ -1,7 +1,7 @@
 <template>
   <div class='main-header'>
     <div class="main-nav-left">
-      <img src="../assets/images/lixi-logo.png"/>
+      <!-- <img src="../assets/images/lixi-logo.png"/> -->
       Lixi.js
     </div>
     <div class="main-nav-right">
@@ -32,8 +32,6 @@
               </el-dropdown>
             </span>
           </div>
-
-
           <div class="nav-item">
             <el-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">

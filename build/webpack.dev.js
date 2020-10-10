@@ -98,7 +98,15 @@ var config = {
             loader: path.resolve(__dirname, './md-loader/index.js')
           }
         ]
-      }
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
     ]
   },
   plugins: [
