@@ -1,14 +1,9 @@
 <template>
   <div id="app">
-    <main-header></main-header>
-    <div style="padding-top: 50px">
-      <lxv-button>
-        btn
-      </lxv-button>
-    </div>
-    <div>
+    <main-header :navAll="navAll"></main-header>
+    <main-content class="page-component" :nav="nav">
       <router-view></router-view>
-    </div>
+    </main-content>
   </div>
 </template>
 
@@ -16,11 +11,25 @@
   import MyButton from '../src/compoments/button/docs/index.md';
   import EMyButton from "../extend/project/lixi-extend/src/compoments/button/docs/index.md";
 
+  import navsData from './router/nav.config.json'
+
   export default {
     name: "app",
     components: {
       MyButton,
       EMyButton
+    },
+    data(){
+      return {
+        meta: this.$route.meta,
+        nav: [],
+        navAll: []
+      }
+    },
+    mounted(){
+      console.log('nav?',navsData["zh-CN"][1].children[0].children);
+      this.nav = navsData["zh-CN"][1].children
+      this.navAll = navsData["zh-CN"]
     }
   }
 </script>

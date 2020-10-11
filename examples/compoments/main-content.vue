@@ -2,14 +2,6 @@
   <div class='main-content'>
     <div class="main-side">
       <div class="side-wrap">
-        <el-select v-model="value" placeholder="请选择">
-          <el-option
-            v-for="item in options"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
         <div class="side-group" v-for="(item,index) in nav" :key="index">
           <div class="title">{{ item.title }}</div>
           <div class="side-item"  v-for="(item1,i) in item.children" :key="i">
