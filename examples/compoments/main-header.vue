@@ -16,84 +16,84 @@
               </router-link>
             </span>
              <span v-if="item.children">
-              <el-dropdown :hide-on-click="false">
+              <lxv-dropdown :hide-on-click="false">
                 <span class="el-dropdown-link">
                   {{ item.name }}<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
-                <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item v-for="(item1,index1) in item.children" :key="index1">
+                <lxv-dropdown-menu slot="dropdown">
+                  <lxv-dropdown-item v-for="(item1,index1) in item.children" :key="index1">
                     <router-link
                       active-class="active"
                       :to="item1.urlPath">
                         {{ item1.name }}
                     </router-link>
-                  </el-dropdown-item>
-                </el-dropdown-menu>
-              </el-dropdown>
+                  </lxv-dropdown-item>
+                </lxv-dropdown-menu>
+              </lxv-dropdown>
             </span>
           </div>
           <div class="nav-item">
-            <el-dropdown :hide-on-click="false">
+            <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 学习<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>黄金糕</el-dropdown-item>
-                <el-dropdown-item>狮子头</el-dropdown-item>
-                <el-dropdown-item>螺蛳粉</el-dropdown-item>
-                <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+              <lxv-dropdown-menu slot="dropdown">
+                <lxv-dropdown-item>黄金糕</lxv-dropdown-item>
+                <lxv-dropdown-item>狮子头</lxv-dropdown-item>
+                <lxv-dropdown-item>螺蛳粉</lxv-dropdown-item>
+                <lxv-dropdown-item disabled>双皮奶</lxv-dropdown-item>
+                <lxv-dropdown-item divided>蚵仔煎</lxv-dropdown-item>
+              </lxv-dropdown-menu>
+            </lxv-dropdown>
           </div>
           <div class="nav-item">
-            <el-dropdown :hide-on-click="false">
+            <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 生态系统<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>黄金糕</el-dropdown-item>
-                <el-dropdown-item>狮子头</el-dropdown-item>
-                <el-dropdown-item>螺蛳粉</el-dropdown-item>
-                <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+              <lxv-dropdown-menu slot="dropdown">
+                <lxv-dropdown-item>黄金糕</lxv-dropdown-item>
+                <lxv-dropdown-item>狮子头</lxv-dropdown-item>
+                <lxv-dropdown-item>螺蛳粉</lxv-dropdown-item>
+                <lxv-dropdown-item disabled>双皮奶</lxv-dropdown-item>
+                <lxv-dropdown-item divided>蚵仔煎</lxv-dropdown-item>
+              </lxv-dropdown-menu>
+            </lxv-dropdown>
           </div>
           <div class="nav-item">
             团队
           </div>
           <div class="nav-item">
-            <el-dropdown :hide-on-click="false">
+            <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 资源列表<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>黄金糕</el-dropdown-item>
-                <el-dropdown-item>狮子头</el-dropdown-item>
-                <el-dropdown-item>螺蛳粉</el-dropdown-item>
-                <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+              <lxv-dropdown-menu slot="dropdown">
+                <lxv-dropdown-item>黄金糕</lxv-dropdown-item>
+                <lxv-dropdown-item>狮子头</lxv-dropdown-item>
+                <lxv-dropdown-item>螺蛳粉</lxv-dropdown-item>
+                <lxv-dropdown-item disabled>双皮奶</lxv-dropdown-item>
+                <lxv-dropdown-item divided>蚵仔煎</lxv-dropdown-item>
+              </lxv-dropdown-menu>
+            </lxv-dropdown>
           </div>
           <div class="nav-item">
-            <el-dropdown :hide-on-click="false">
+            <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 支持lixi<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>黄金糕</el-dropdown-item>
-                <el-dropdown-item>狮子头</el-dropdown-item>
-                <el-dropdown-item>螺蛳粉</el-dropdown-item>
-                <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+              <lxv-dropdown-menu slot="dropdown">
+                <lxv-dropdown-item>黄金糕</lxv-dropdown-item>
+                <lxv-dropdown-item>狮子头</lxv-dropdown-item>
+                <lxv-dropdown-item>螺蛳粉</lxv-dropdown-item>
+                <lxv-dropdown-item disabled>双皮奶</lxv-dropdown-item>
+                <lxv-dropdown-item dividled>蚵仔煎</lxv-dropdown-item>
+              </lxv-dropdown-menu>
+            </lxv-dropdown>
           </div>
            <!-- 语言选择器 -->
           <div class="nav-item">
-            <el-dropdown
+            <lxv-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
               :class="{ 'is-active': langDropdownVisible }">
@@ -101,18 +101,18 @@
                 {{ displayedLang }}
                 <i class="el-icon-arrow-down el-icon--right"></i>
               </span>
-              <el-dropdown-menu
+              <lxv-dropdown-menu
                 slot="dropdown"
                 class="nav-dropdown-list"
                 @input="handleLangDropdownToggle">
-                <el-dropdown-item
+                <lxv-dropdown-item
                   v-for="(value, key) in langs"
                   :key="key"
                   @click.native="switchLang(value)">
                   {{ value }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </lxv-dropdown-item>
+              </lxv-dropdown-menu>
+            </lxv-dropdown>
           </div>
         </div>
       </div>

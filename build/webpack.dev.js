@@ -64,6 +64,7 @@ var config = {
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
+        exclude: /popper\.js/,
         loader: 'babel-loader',
         options: {
           presets:[

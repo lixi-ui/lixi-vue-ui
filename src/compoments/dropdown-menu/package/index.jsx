@@ -255,12 +255,12 @@ export default {
       this.$emit('click', event);
       hide();
     };
-    console.log("!splitButton---------->", !splitButton);
+
     let triggerElm = !splitButton
       ? this.$slots.default
       : (<el-button-group>
         <el-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
-          {this.$slots.default}11
+          {this.$slots.default}
         </el-button>
         <el-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
           <i class="el-dropdown__icon el-icon-arrow-down"></i>

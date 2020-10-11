@@ -1,5 +1,7 @@
 import LxvButton from "./compoments/button/package/index.ts";
 import LxvDropdown from "./compoments/dropdown/package/index.ts";
+import LxvDropdownItem from "./compoments/dropdown-item/package/index.ts";
+import LxvDropdownMenu from "./compoments/dropdown-menu/package/index.ts";
 import LxvDemo from "./compoments/button/demo/index.vue";
 import LxveButton from "../extend/project/lixi-extend/src/compoments/button/demo/index.vue";
 import LxveDemo from "../extend/project/lixi-extend/src/compoments/button/demo/index.vue";
@@ -7,6 +9,8 @@ import LxveDemo from "../extend/project/lixi-extend/src/compoments/button/demo/i
 var install = function(Vue){
   Vue.component(LxvButton.name, LxvButton);
   Vue.component(LxvDropdown.name, LxvDropdown);
+  Vue.component(LxvDropdownItem.name, LxvDropdownItem);
+  Vue.component(LxvDropdownMenu.name, LxvDropdownMenu);
   Vue.component(LxvDemo.name, LxvDemo);
   Vue.component(LxveButton.name, LxveButton);
   Vue.component(LxveDemo.name, LxveDemo);
