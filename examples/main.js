@@ -7,10 +7,9 @@ import dome from "./compoments/demo.vue";
 import MainHeader from './compoments/main-header';
 
 import '../src/style/src/index.scss';
+import './style/index.scss';
 
 import Lxv from "../src/index.js";
-
-console.log(Lxv);
 
 Vue.use(VueRouter);
 Vue.use(Lxv);

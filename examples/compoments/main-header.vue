@@ -1,7 +1,7 @@
 <template>
   <div class='main-header'>
     <div class="main-nav-left">
-      <!-- <img src="../assets/images/lixi-logo.png"/> -->
+      <img src="./lixi-logo.png" />
       Lixi.js
     </div>
     <div class="main-nav-right">

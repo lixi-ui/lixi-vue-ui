@@ -28,7 +28,6 @@
 // Supported: Node, AMD, Browser globals
 //
 ;(function (root, factory) {
-    console.log("root",root);
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(factory);

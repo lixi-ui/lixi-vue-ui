@@ -124,6 +124,15 @@ var config = {
           'sass-loader'
         ]
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10,
+          name: path.posix.join("static", 'img/[name].[hash:7].[ext]'),
+          esModule: false
+        }
+      },
     ]
   },
   plugins: [
@@ -135,6 +144,8 @@ var config = {
     new VueLoaderPlugins()
   ]
 }
+
+console.log(`path.posix.join("static", 'img/[name].[hash:7].[ext]')`,path.posix.join("static", 'img/[name].[hash:7].[ext]'));
 
 var server = new webpackDevServer(webpack(config));
 

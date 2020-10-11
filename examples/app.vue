@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div class="heard-nav">
-      <div class="">
-        <main-header></main-header>
-      </div>
-    </div>
+    <main-header></main-header>
     <div style="padding-top: 50px">
       <lxv-button>
         btn
