@@ -1,5 +1,9 @@
 {
-  "presets": [["@babel/preset-env", { "modules": false }]],
+  "presets": [
+    ["@babel/preset-env", { "modules": false }],
+    "@vue/babel-preset-jsx"
+  ],
+  "plugins": ["@vue/babel-plugin-jsx","@babel/plugin-transform-runtime"],
   "env": {
     "test": {
       "presets": [["env", { "targets": { "node": "current" } }]]

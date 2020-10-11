@@ -49,8 +49,8 @@ var config = {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules'],
     alias: {
-      'src': path.join(__dirname,'../src',
-      ),
+      'src': path.join(__dirname,'../src'),
+      'lixiv-ui':  path.join(__dirname,'../'),
     }
   },
   devServer: {
@@ -62,7 +62,23 @@ var config = {
   module: {
     rules:[
       {
-        test: /\.(jsx?|babel|es6|tsx?)$/,
+        test: /\.(jsx?|babel|es6)$/,
+        include: process.cwd(),
+        loader: 'babel-loader',
+        options: {
+          presets:[
+            ["@babel/preset-env", { "modules": false }],
+            [
+              '@vue/babel-preset-jsx',
+              {
+                functional: false,
+              },
+            ],
+          ]
+        }
+      },
+      {
+        test: /\.(tsx?)$/,
         include: process.cwd(),
         loader: 'babel-loader',
         options: {
