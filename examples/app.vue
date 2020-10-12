@@ -8,17 +8,11 @@
 </template>
 
 <script>
-  import MyButton from '../src/compoments/button/docs/index.md';
-  import EMyButton from "../extend/project/lixi-extend/src/compoments/button/docs/index.md";
 
   import navsData from './router/nav.config.json'
 
   export default {
     name: "app",
-    components: {
-      MyButton,
-      EMyButton
-    },
     data(){
       return {
         meta: this.$route.meta,
