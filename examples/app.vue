@@ -20,8 +20,10 @@
         navAll: []
       }
     },
+    components:{
+    },
     mounted(){
-      console.log('nav?',navsData["zh-CN"][1].children[0].children);
+      // console.log('nav?',navsData["zh-CN"][1].children[0].children);
       this.nav = navsData["zh-CN"][1].children
       this.navAll = navsData["zh-CN"]
     }

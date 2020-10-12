@@ -32,7 +32,7 @@
               </lxv-dropdown>
             </span>
           </div>
-          <div class="nav-item">
+          <!-- <div class="nav-item">
             <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 学习<i class="el-icon-arrow-down el-icon--right"></i>
@@ -45,8 +45,8 @@
                 <lxv-dropdown-item divided>蚵仔煎</lxv-dropdown-item>
               </lxv-dropdown-menu>
             </lxv-dropdown>
-          </div>
-          <div class="nav-item">
+          </div> -->
+          <!-- <div class="nav-item">
             <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
                 生态系统<i class="el-icon-arrow-down el-icon--right"></i>
@@ -91,7 +91,6 @@
               </lxv-dropdown-menu>
             </lxv-dropdown>
           </div>
-           <!-- 语言选择器 -->
           <div class="nav-item">
             <lxv-dropdown
               trigger="click"
@@ -113,7 +112,7 @@
                 </lxv-dropdown-item>
               </lxv-dropdown-menu>
             </lxv-dropdown>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
