@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import navConfig from './nav.config.json'
 
+import button from "../../src/compoments/button/docs/index.md"
+
 Vue.use(Router)
 
 const LOAD_MAP = {
@@ -92,6 +94,17 @@ routes = routes.concat([{
   path: '*',
   redirect: '/home'
 }])
+
+var component = [
+  {
+    path: "/component/button",
+    name: "component-button",
+    component: button,
+  }
+]
+
+routes = routes.concat(component)
+
 
 export default new Router({
   mode: 'hash',
