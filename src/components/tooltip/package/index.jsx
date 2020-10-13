@@ -54,7 +54,6 @@ export default {
       default: 0
     }
   },
-
   data() {
     return {
       tooltipId: `el-tooltip-${generateId()}`,
@@ -64,17 +63,14 @@ export default {
   },
   beforeCreate() {
     if (this.$isServer) return;
-
     this.popperVM = new Vue({
       data: { node: '' },
       render(h) {
         return this.node;
       }
     }).$mount();
-
     this.debounceClose = debounce(200, () => this.handleClosePopper());
   },
-
   render(h) {
     if (this.popperVM) {
       this.popperVM.node = (

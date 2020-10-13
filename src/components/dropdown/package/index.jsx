@@ -1,8 +1,8 @@
 import Clickoutside from 'lixiv-ui/src/utils/clickoutside';
 import Emitter from 'lixiv-ui/src/mixins/emitter';
 import Migrating from 'lixiv-ui/src/mixins/migrating';
-import ElButton from 'lixiv-ui/src/compoments/button/package/index.ts';
-import ElButtonGroup from 'lixiv-ui/src/compoments/button-group/package/index.ts';
+import ElButton from 'lixiv-ui/src/components/button/package/index.ts';
+import ElButtonGroup from 'lixiv-ui/src/components/button-group/package/index.ts';
 import { generateId } from 'lixiv-ui/src/utils/util';
 
 export default {
