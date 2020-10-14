@@ -43,9 +43,9 @@ const LOAD_COM_DOCS_MAP = {
   }
 };
 
-// function loadComDocs(lang,path){
-//   return LOAD_COM_DOCS_MAP[lang](path)
-// }
+function loadComDocs(lang,path){
+  return LOAD_COM_DOCS_MAP[lang](path)
+}
 
 var routes = []
 
@@ -69,28 +69,11 @@ navConfig['zh-CN'].forEach(item => {
   if (item.children) {
     var routes1 = []
     item.children.forEach(item1 => {
-      console.log('item1',item.path + item1.path)
       var obj1 = {
         path: item1.name,
         name: "component-" + item1.name,
         meta: "",
-        component: load('zh-CN', item.path + item1.path)
-      }
-      if (item1.children) {
-        obj1.redirect = item.path + item1.path + `/index`
-        var routes2 = []
-        item1.children.forEach(item2 => {
-          var obj2 = {
-            path: item2.name,
-            name: "component-" + item2.name,
-            meta: {
-              path: item.path + item1.path + item2.path
-            },
-            component: loadDocs('zh-CN', item.path + item1.path + '/zh-CN' + item2.path)
-          }
-          routes2.push(obj2)
-        })
-        obj1.children = routes2
+        component: item.name === 'component'? loadComDocs('zh-CN', item1.path) : loadDocs('zh-CN', item.path +"/zh-CN"+ item1.path)
       }
       routes1.push(obj1)
     })

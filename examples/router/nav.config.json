@@ -7,25 +7,38 @@
     {
       "name": "docs",
       "path": "/docs",
+      "title": "docs",
       "children": [
         {
-          "path": "/plan",
-          "name": "plan",
-          "urlPath": "/docs/plan",
-          "title": "plan",
-          "children": [
-            {
-              "path": "/index",
-              "urlPath": "/docs/plan/index",
-              "name": "index",
-              "title": "index"
-            }
-          ]
+          "path": "/index",
+          "urlPath": "/docs/index",
+          "name": "index",
+          "title": "index"
         },
         {
           "path": "/api",
           "name": "api",
-          "urlPath": "/docs/api"
+          "urlPath": "/docs/api",
+          "title": "api"
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "path": "/component",
+      "title": "component",
+      "children": [
+        {
+          "path": "/button",
+          "urlPath": "/component/button",
+          "name": "button",
+          "title": "button"
+        },
+        {
+          "path": "/dropdown",
+          "urlPath": "/component/dropdown",
+          "name": "dropdown",
+          "title": "dropdown"
         }
       ]
     }

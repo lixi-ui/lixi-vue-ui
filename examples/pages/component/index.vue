@@ -1,26 +1,26 @@
 <template>
-  <div class="page-component">
-    <h3>plan</h3>
-    <router-view>
-    </router-view>
+  <div class="page-component page-container">
+    <side-nav :data="[nav['zh-CN'][2]]" base="docs">
+    </side-nav>
+    <main-content>
+      <router-view>
+      </router-view>
+    </main-content>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import plan from './zh-CN/index.md'
-import planEs from './es/index.md'
 
+import navsData from '../../router/nav.config.json'
+
+import Vue from 'vue'
 
 export default {
   name: 'docs',
-  components: {
-    plan: plan,
-    planEs
-  },
   data(){
     return{
-      componentsName: 'plan'
+      componentsName: 'plan',
+      nav: navsData
     }
   },
   methods: {

@@ -8,14 +8,14 @@
       <div class="nav-right">
         <div class="nav-right-wrap">
           <div class="nav-item" v-for="(item,index) in navAll" :key="index">
-            <span v-if="!item.children">
+            <span v-if="true || !item.children">
               <router-link
                 active-class="active"
                 :to="item.path">
                   {{ item.name }}
               </router-link>
             </span>
-             <span v-if="item.children">
+             <span v-if="item.children && false">
               <lxv-dropdown :hide-on-click="false">
                 <span class="el-dropdown-link">
                   {{ item.name }}<i class="el-icon-arrow-down el-icon--right"></i>

@@ -1,9 +1,6 @@
 <template>
   <div class="page-component page-container">
-    <!-- <h1 @click="handlerClick">Docs</h1> -->
-    <!-- <components :is="componentsName">
-    </components> -->
-    <side-nav>
+    <side-nav :data="[nav['zh-CN'][1]]" base="docs">
     </side-nav>
     <main-content>
       <router-view>
@@ -13,20 +10,17 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import plan from './plan/zh-CN/index.md'
-import planEs from './plan/es/index.md'
 
+import navsData from '../../router/nav.config.json'
+
+import Vue from 'vue'
 
 export default {
   name: 'docs',
-  components: {
-    plan: plan,
-    planEs
-  },
   data(){
     return{
-      componentsName: 'plan'
+      componentsName: 'plan',
+      nav: navsData
     }
   },
   methods: {

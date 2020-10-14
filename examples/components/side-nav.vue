@@ -1,7 +1,7 @@
 <template>
   <div class="main-side">
     <div class="side-wrap">
-      <div class="side-group" v-for="(item,index) in nav" :key="index">
+      <div class="side-group" v-for="(item,index) in data" :key="index">
         <div class="title">{{ item.title }}</div>
         <div class="side-item"  v-for="(item1,i) in item.children" :key="i">
           <router-link
@@ -17,9 +17,11 @@
 
 <script>
   export default {
+    props:{
+      data: Array
+    },
     data () {
       return {
-        nav: []
       }
     }
     

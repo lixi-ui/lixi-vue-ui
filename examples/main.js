@@ -24,7 +24,6 @@ Vue.component('main-header', MainHeader);
 Vue.component('main-content', MainContent);
 Vue.component('main-footer', MainFooter);
 
-
 new Vue({
   el: "#app",
   render: function(h) { return h(App); },
