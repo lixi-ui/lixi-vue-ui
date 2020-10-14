@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <main-header :navAll="navAll"></main-header>
-    <main-content class="page-component" :nav="nav">
+    <div class="main-cnt main-content page-component">
       <router-view></router-view>
-    </main-content>
+    </div>
   </div>
 </template>
 

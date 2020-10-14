@@ -18,6 +18,8 @@
 .main-content{
   min-height: calc(100vh - 3.6rem - 2px);
   border-bottom: 1px solid lightgray;
+  position: relative;
+  padding-top: 4rem;
 }
 .main-footer{
   padding: .7rem 1.5rem;

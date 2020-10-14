@@ -3,12 +3,13 @@ import App from "./app.vue";
 
 import router from './router/index.js';
 
-import dome from "./compoments/demo.vue";
+import dome from "./components/demo.vue";
 
-import demoBlock from './compoments/demo-block';
-import MainHeader from './compoments/main-header';
-import MainContent from './compoments/main-content';
-import MainFooter from './compoments/main-footer';
+import sideNav from './components/side-nav';
+import demoBlock from './components/demo-block';
+import MainHeader from './components/main-header';
+import MainContent from './components/main-content';
+import MainFooter from './components/main-footer';
 
 import '../src/style/src/index.scss';
 import './style/index.scss';
@@ -18,6 +19,7 @@ import Lxv from "../src/index.js";
 Vue.use(Lxv);
 Vue.component(dome.name, dome);
 Vue.component('demo-block', demoBlock);
+Vue.component('side-nav', sideNav);
 Vue.component('main-header', MainHeader);
 Vue.component('main-content', MainContent);
 Vue.component('main-footer', MainFooter);

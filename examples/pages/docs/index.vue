@@ -1,10 +1,14 @@
 <template>
   <div class="page-component page-container">
-    <h1 @click="handlerClick">Docs</h1>
+    <!-- <h1 @click="handlerClick">Docs</h1> -->
     <!-- <components :is="componentsName">
     </components> -->
-    <router-view>
-    </router-view>
+    <side-nav>
+    </side-nav>
+    <main-content>
+      <router-view>
+      </router-view>
+    </main-content>
   </div>
 </template>
 

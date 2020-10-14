@@ -33,7 +33,19 @@ const LOAD_DOCS_MAP = {
 
 function loadDocs(lang,path){
   return LOAD_DOCS_MAP[lang](path);
-}
+};
+
+const LOAD_COM_DOCS_MAP = {
+  'zh-CN': path => {
+    return r => require.ensure([], () =>
+      r(require(`../../src/components${path}/docs/index.md`)),
+    'zh-CN');
+  }
+};
+
+// function loadComDocs(lang,path){
+//   return LOAD_COM_DOCS_MAP[lang](path)
+// }
 
 var routes = []
 
@@ -60,12 +72,12 @@ navConfig['zh-CN'].forEach(item => {
       console.log('item1',item.path + item1.path)
       var obj1 = {
         path: item1.name,
-        redirect: item.path + item1.path + `/index`,
         name: "component-" + item1.name,
         meta: "",
         component: load('zh-CN', item.path + item1.path)
       }
       if (item1.children) {
+        obj1.redirect = item.path + item1.path + `/index`
         var routes2 = []
         item1.children.forEach(item2 => {
           var obj2 = {
