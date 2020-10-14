@@ -5,46 +5,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
-  mode: "development",
+  mode: "production",
   entry: {
-    docs: path.resolve(process.cwd(), "./examples/main.js") 
+    app: ['./src/index.js']
   },
   output: {
-    path: path.resolve(process.cwd(), './examples/lixi-ui/'),
-    publicPath: '',
-    filename: '[name].js',
-    chunkFilename: '[name].js'
+    path: path.resolve(process.cwd(), './lib'),
+    publicPath: '/dist/',
+    filename: 'index.js',
+    chunkFilename: '[id].js',
+    libraryTarget: 'umd',
+    library: 'LIXI',
+    umdNamedDefine: true
   },
-  // entry: {
-  //   app: ['./src/index.js']
-  // },
-  // output: {
-  //   path: path.resolve(process.cwd(), './lib'),
-  //   publicPath: '/dist/',
-  //   filename: 'index.js',
-  //   chunkFilename: '[id].js',
-  //   libraryTarget: 'umd',
-  //   library: 'LIXI',
-  //   umdNamedDefine: true
-  // },
-  // externals: {
-  //   vue: {
-  //     root: 'Vue',
-  //     commonjs: 'vue',
-  //     commonjs2: 'vue',
-  //     amd: 'vue'
-  //   }
-  // },
-  // entry: {
-  //   app: ['./src/index.js']
-  // },
-  // output: {
-  //   path: path.resolve(process.cwd(), './lib'),
-  //   publicPath: '/dist/',
-  //   filename: 'lixi-ui.common.js',
-  //   chunkFilename: '[id].js',
-  //   libraryTarget: 'commonjs2'
-  // },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
+  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules'],
@@ -136,19 +117,12 @@ var config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './examples/index.html',
-      filename: './index.html',
-      favicon: './examples/assets/images/lixi-logo.png'
-    }),
     new VueLoaderPlugins()
   ]
 }
 
-var server = new webpackDevServer(webpack(config));
 
-server.listen(8888, 'localhost', (err) => {
-  if (err) {
-    console.log(err);
-  }
+webpack(config,function(err,res){
+  console.log("lib seccess");
+  // console.log("res", res);
 });

@@ -11,6 +11,8 @@ examples/lixi-ui
 server/public/lixi-ui
 server/public/dist
 
+src/style/lib
+
 # Editor directories and files
 .idea
 .vscode
