@@ -1,7 +1,8 @@
 [
   {
+    "path": "/lixi-vue-extend/button",
     "name": "lixi-vue-extend",
     "src": "/lixi-vue-extend/src/index.js",
-    "docs": "/button/docs/index.md"
+    "docs": "/button/docs/"
   }
 ]

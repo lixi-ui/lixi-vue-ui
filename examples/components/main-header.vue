@@ -32,6 +32,15 @@
               </lxv-dropdown>
             </span>
           </div>
+          <div class="nav-item">
+            <span>
+              <router-link
+                active-class="active"
+                to="/lixi-vue-extend">
+                  extend
+              </router-link>
+            </span>
+          </div>
           <!-- <div class="nav-item">
             <lxv-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">

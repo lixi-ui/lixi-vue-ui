@@ -16,6 +16,10 @@ import './style/index.scss';
 
 import Lxv from "../src/index.js";
 
+
+import Lxve from "./extend.js"
+Vue.use(Lxve);
+
 Vue.use(Lxv);
 Vue.component(dome.name, dome);
 Vue.component('demo-block', demoBlock);

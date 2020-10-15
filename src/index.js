@@ -26,8 +26,6 @@ const install = function(Vue, opts = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-
-
 };
 
 /* istanbul ignore if */

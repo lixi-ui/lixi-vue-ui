@@ -104,14 +104,14 @@ export default {
 <style lang="scss" scoped>
 .home {
   width: 100%;
-  background: #ddd;
+  // background: #ddd;
   .top{
     padding: 40px 40px 30px;
     .inner{
       max-width: 1260px;
       // height: 10px;
       margin: 0px auto;
-      background: lightblue;
+      // background: lightblue;
       display: flex;
       .left{
         width: 40%;

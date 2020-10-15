@@ -49,10 +49,21 @@ function loadComDocs(lang,path){
   return LOAD_COM_DOCS_MAP[lang](path)
 }
 
+const LOAD_EXTEND_DOCS_MAP = {
+  'zh-CN': path => {
+    return r => require.ensure([], () =>
+      r(require(`../../extend/project/lixi-vue-extend/src/components${path}/docs/index.md`)),
+    'zh-CN');
+  }
+};
+
+function loadExtendDocs(lang,path){
+  return LOAD_EXTEND_DOCS_MAP[lang](path)
+}
+
 var routes = []
 
 navConfig['zh-CN'].forEach(item => {
-  var redirect = ''
   var obj = {};
   if(item.children){
     obj = {
@@ -100,18 +111,49 @@ var component = [
   }
 ]
 
-
 routes = routes.concat(component)
 
-console.log("------------>",extend[0].docs);
-// var extendCom = [
-//   {
-//     path: extend[0].name,
-//     name: "extend",
-//     component: require("../../extend/project/lixi-vue-extend/src/compoments/" + extend[0].docs)
-//   }
-// ]
+var extendNav = [
+  {
+    "name": "lixi-vue-extend",
+    "path": "/lixi-vue-extend",
+    "title": "lixi-vue-extend",
+    "children": [
+      {
+        "path": "/button",
+        "urlPath": "/component/button",
+        "name": "button",
+        "title": "button"
+      }
+    ]
+  }
+]
+var extendRoutes = []
+extendNav.forEach(item => {
+  var obj = {
+    path: item.path,
+    redirect: item.path + item.children[0].path,
+    name: "component-" + item.name,
+    component: load('zh-CN', "/extend")
+  }
+  var routes1 = []
+  item.children.forEach(item1 => {
+    var obj1 = {
+      path: item1.name,
+      name: "component-" + item1.name,
+      meta: "",
+      component: loadExtendDocs('zh-CN', item1.path)
+    }
+    routes1.push(obj1)
+  })
+  obj.children = routes1
+  extendRoutes.push(obj);
+})
 
+// require("" + )
+
+
+routes = routes.concat(extendRoutes)
 
 export default new Router({
   mode: 'hash',
