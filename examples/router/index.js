@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import navConfig from './nav.config.json'
 
+import extend from "../../extend/manifest.json"
+
 import button from "../../src/components/button/docs/index.md"
 
 Vue.use(Router)
@@ -98,7 +100,17 @@ var component = [
   }
 ]
 
+
 routes = routes.concat(component)
+
+console.log("------------>",extend[0].docs);
+// var extendCom = [
+//   {
+//     path: extend[0].name,
+//     name: "extend",
+//     component: require("../../extend/project/lixi-vue-extend/src/compoments/" + extend[0].docs)
+//   }
+// ]
 
 
 export default new Router({
