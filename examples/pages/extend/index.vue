@@ -23,13 +23,13 @@ export default {
         {
           "name": "lixi-vue-extend",
           "path": "/lixi-vue-extend",
-          "title": "lixi-vue-extend",
+          "title": "lixi-vue-扩展",
           "children": [
             {
               "path": "/button",
               "urlPath": "/lixi-vue-extend/button",
               "name": "button",
-              "title": "button"
+              "title": "button 按钮"
             }
           ]
         }

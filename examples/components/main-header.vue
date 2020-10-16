@@ -12,13 +12,13 @@
               <router-link
                 active-class="active"
                 :to="item.path">
-                  {{ item.name }}
+                  {{ item.title }}
               </router-link>
             </span>
              <span v-if="item.children && false">
               <lxv-dropdown :hide-on-click="false">
                 <span class="el-dropdown-link">
-                  {{ item.name }}<i class="el-icon-arrow-down el-icon--right"></i>
+                  {{ item.title }}<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <lxv-dropdown-menu slot="dropdown">
                   <lxv-dropdown-item v-for="(item1,index1) in item.children" :key="index1">
@@ -37,8 +37,15 @@
               <router-link
                 active-class="active"
                 to="/lixi-vue-extend">
-                  extend
+                  扩展
               </router-link>
+            </span>
+          </div>
+          <div class="nav-item">
+            <span>
+              <a href="https://github.com/lixi-ui/lixi-vue-ui" target="_blank">
+                  github
+              </a>
             </span>
           </div>
           <!-- <div class="nav-item">
@@ -196,7 +203,7 @@ export default {
         .nav-right-wrap{
           display: flex;
           .nav-item{
-            padding: 0 5px;
+            padding: 0 15px;
           }
         }
       }

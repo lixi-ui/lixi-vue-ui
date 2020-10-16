@@ -41,7 +41,7 @@
       overflow: auto;
       .side-group{
         margin-bottom: 10px;
-        padding: 10px 20px;
+        padding: 10px 5px 10px 20px;
         .title{
           color: #333;
           padding-bottom: 5px;

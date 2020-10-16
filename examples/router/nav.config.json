@@ -2,43 +2,51 @@
   "zh-CN": [
     {
       "name": "home",
-      "path": "/home"
+      "path": "/home",
+      "title": "首页"
     },
     {
       "name": "docs",
       "path": "/docs",
-      "title": "docs",
+      "title": "文档",
       "children": [
         {
           "path": "/index",
           "urlPath": "/docs/index",
           "name": "index",
-          "title": "index"
+          "title": "说明"
         },
         {
           "path": "/api",
           "name": "api",
           "urlPath": "/docs/api",
-          "title": "api"
+          "title": "快速上手"
+        },
+        {
+          "path": "/development",
+          "name": "development",
+          "urlPath": "/docs/development",
+          "title": "开发问题"
         }
+
       ]
     },
     {
       "name": "component",
       "path": "/component",
-      "title": "component",
+      "title": "组件",
       "children": [
         {
           "path": "/button",
           "urlPath": "/component/button",
           "name": "button",
-          "title": "button"
+          "title": "Button 按钮"
         },
         {
           "path": "/dropdown",
           "urlPath": "/component/dropdown",
           "name": "dropdown",
-          "title": "dropdown"
+          "title": "Dropdown 下拉菜单"
         }
       ]
     }
