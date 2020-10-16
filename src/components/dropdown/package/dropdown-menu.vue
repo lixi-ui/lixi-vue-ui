@@ -1,6 +1,6 @@
 <template>
-  <transition name="el-zoom-in-top" @after-leave="doDestroy">
-    <ul class="el-dropdown-menu el-popper" :class="[size && `el-dropdown-menu--${size}`]" v-show="showPopper">
+  <transition name="lxv-zoom-in-top" @after-leave="doDestroy">
+    <ul class="lxv-dropdown-menu lxv-popper" :class="[size && `lxv-dropdown-menu--${size}`]" v-show="showPopper">
       <slot></slot>
     </ul>
   </transition>

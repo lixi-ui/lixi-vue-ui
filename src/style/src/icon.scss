@@ -1,0 +1,186 @@
+@import "./common/var";
+
+@font-face {
+  font-family: 'lixi-icons';
+  src: url('#{$--font-path}/lixi-icons.woff') format('woff'), /* chrome, firefox */
+       url('#{$--font-path}/lixi-icons.ttf') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: normal
+}
+
+[class^="lxv-icon-"], [class*=" lxv-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lixi-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lxv-icon-info:before { content: "\e61a"; }
+
+.lxv-icon-error:before { content: "\e62c"; }
+
+.lxv-icon-success:before { content: "\e62d"; }
+
+.lxv-icon-warning:before { content: "\e62e"; }
+
+.lxv-icon-question:before { content: "\e634"; }
+
+.lxv-icon-back:before { content: "\e606"; }
+
+.lxv-icon-arrow-left:before { content: "\e600"; }
+
+.lxv-icon-arrow-down:before { content: "\e603"; }
+
+.lxv-icon-arrow-right:before { content: "\e604"; }
+
+.lxv-icon-arrow-up:before { content: "\e605"; }
+
+.lxv-icon-caret-left:before { content: "\e60a"; }
+
+.lxv-icon-caret-bottom:before { content: "\e60b"; }
+
+.lxv-icon-caret-top:before { content: "\e60c"; }
+
+.lxv-icon-caret-right:before { content: "\e60e"; }
+
+.lxv-icon-d-arrow-left:before { content: "\e610"; }
+
+.lxv-icon-d-arrow-right:before { content: "\e613"; }
+
+.lxv-icon-minus:before { content: "\e621"; }
+
+.lxv-icon-plus:before { content: "\e62b"; }
+
+.lxv-icon-remove:before { content: "\e635"; }
+
+.lxv-icon-circle-plus:before { content: "\e601"; }
+
+.lxv-icon-remove-outline:before { content: "\e63c"; }
+
+.lxv-icon-circle-plus-outline:before { content: "\e602"; }
+
+.lxv-icon-close:before { content: "\e60f"; }
+
+.lxv-icon-check:before { content: "\e611"; }
+
+.lxv-icon-circle-close:before { content: "\e607"; }
+
+.lxv-icon-circle-check:before { content: "\e639"; }
+
+.lxv-icon-circle-close-outline:before { content: "\e609"; }
+
+.lxv-icon-circle-check-outline:before { content: "\e63e"; }
+
+.lxv-icon-zoom-out:before { content: "\e645"; }
+
+.lxv-icon-zoom-in:before { content: "\e641"; }
+
+.lxv-icon-d-caret:before { content: "\e615"; }
+
+.lxv-icon-sort:before { content: "\e640"; }
+
+.lxv-icon-sort-down:before { content: "\e630"; }
+
+.lxv-icon-sort-up:before { content: "\e631"; }
+
+.lxv-icon-tickets:before { content: "\e63f"; }
+
+.lxv-icon-document:before { content: "\e614"; }
+
+.lxv-icon-goods:before { content: "\e618"; }
+
+.lxv-icon-sold-out:before { content: "\e63b"; }
+
+.lxv-icon-news:before { content: "\e625"; }
+
+.lxv-icon-message:before { content: "\e61b"; }
+
+.lxv-icon-date:before { content: "\e608"; }
+
+.lxv-icon-printer:before { content: "\e62f"; }
+
+.lxv-icon-time:before { content: "\e642"; }
+
+.lxv-icon-bell:before { content: "\e622"; }
+
+.lxv-icon-mobile-phone:before { content: "\e624"; }
+
+.lxv-icon-service:before { content: "\e63a"; }
+
+.lxv-icon-view:before { content: "\e643"; }
+
+.lxv-icon-menu:before { content: "\e620"; }
+
+.lxv-icon-more:before { content: "\e646"; }
+
+.lxv-icon-more-outline:before { content: "\e626"; }
+
+.lxv-icon-star-on:before { content: "\e637"; }
+
+.lxv-icon-star-off:before { content: "\e63d"; }
+
+.lxv-icon-location:before { content: "\e61d"; }
+
+.lxv-icon-location-outline:before { content: "\e61f"; }
+
+.lxv-icon-phone:before { content: "\e627"; }
+
+.lxv-icon-phone-outline:before { content: "\e628"; }
+
+.lxv-icon-picture:before { content: "\e629"; }
+
+.lxv-icon-picture-outline:before { content: "\e62a"; }
+
+.lxv-icon-delete:before { content: "\e612"; }
+
+.lxv-icon-search:before { content: "\e619"; }
+
+.lxv-icon-edit:before { content: "\e61c"; }
+
+.lxv-icon-edit-outline:before { content: "\e616"; }
+
+.lxv-icon-rank:before { content: "\e632"; }
+
+.lxv-icon-refresh:before { content: "\e633"; }
+
+.lxv-icon-share:before { content: "\e636"; }
+
+.lxv-icon-setting:before { content: "\e638"; }
+
+.lxv-icon-upload:before { content: "\e60d"; }
+
+.lxv-icon-upload2:before { content: "\e644"; }
+
+.lxv-icon-download:before { content: "\e617"; }
+
+.lxv-icon-loading:before { content: "\e61e"; }
+
+.lxv-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.lxv-icon--right {
+  margin-left: 5px;
+}
+.lxv-icon--left {
+  margin-right: 5px;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

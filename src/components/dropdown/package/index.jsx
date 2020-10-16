@@ -90,7 +90,7 @@ export default {
       this.$emit('visible-change', val);
     },
     focusing(val) {
-      const selfDefine = this.$el.querySelector('.el-dropdown-selfdefine');
+      const selfDefine = this.$el.querySelector('.lxv-dropdown-selfdefine');
       if (selfDefine) { // 自定义
         if (val) {
           selfDefine.className += ' focusing';
@@ -195,7 +195,7 @@ export default {
       if (!this.splitButton) { // 自定义
         this.triggerElm.setAttribute('role', 'button');
         this.triggerElm.setAttribute('tabindex', this.tabindex);
-        this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' el-dropdown-selfdefine'); // 控制
+        this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' lxv-dropdown-selfdefine'); // 控制
       }
     },
     initEvent() {
@@ -257,17 +257,17 @@ export default {
     };
     let triggerElm = !splitButton
       ? this.$slots.default
-      : (<el-button-group>
-        <el-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
+      : (<lxv-button-group>
+        <lxv-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
           {this.$slots.default}
-        </el-button>
-        <el-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
-          <i class="el-dropdown__icon el-icon-arrow-down"></i>
-        </el-button>
-      </el-button-group>);
+        </lxv-button>
+        <lxv-button ref="trigger" type={type} size={dropdownSize} class="lxv-dropdown__caret-button">
+          <i class="lxv-dropdown__icon lxv-icon-arrow-down"></i>
+        </lxv-button>
+      </lxv-button-group>);
 
     return (
-      <div class="el-dropdown" v-clickoutside={hide}>
+      <div class="lxv-dropdown" v-clickoutside={hide}>
         {triggerElm}
         {this.$slots.dropdown}
       </div>

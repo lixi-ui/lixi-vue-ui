@@ -111,7 +111,7 @@ var component = [
   }
 ]
 
-routes = routes.concat(component)
+routes = routes.concat(component);
 
 var extendNav = [
   {

@@ -44,7 +44,7 @@
     bottom: 0;
     .md-cnt{
       min-height: calc(100vh - 7.4rem - 2px);
-      padding-left: 20px;
+      padding: 0 40px;
     }
   }
 </style>

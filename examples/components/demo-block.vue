@@ -26,7 +26,7 @@
       <transition name="text-slide">
         <span v-show="hovering">{{ controlText }}</span>
       </transition>
-      <lxv-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
+      <!-- <lxv-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
         <transition name="text-slide">
           <lxv-button
             v-show="hovering || isExpanded"
@@ -37,7 +37,7 @@
             {{ langConfig['button-text'] }}
           </lxv-button>
         </transition>
-      </lxv-tooltip>
+      </lxv-tooltip> -->
     </div>
   </div>
 </template>
@@ -135,7 +135,7 @@
       &.is-fixed {
         position: fixed;
         bottom: 0;
-        width: 868px;
+        width: calc(100% - 282px);
       }
 
       i {
@@ -258,8 +258,8 @@
       langConfig() {
         return {
           'button-text': 111,
-          'hide-text': 222,
-          'show-text': 333,
+          'hide-text': "隐藏代码",
+          'show-text': "显示代码",
           'tooltip-text': 444
         };
       },
