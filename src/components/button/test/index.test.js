@@ -1,16 +1,16 @@
 import 'jsdom-global/register';
+import { createVue } from "../../../../test/unit.js";
 import { mount } from '@vue/test-utils';
+
 import Component from '../package/index.ts';
+import buttonDemo from '../demo/index.vue';
 
 describe('Component', () => {
-  test('is a Vue instance', () => {
-    const wrapper = mount(Component);
-    // console.log('wrapper', wrapper);
-    expect(7).toBe(7);
+  test('button click', () => {
+    const wrapper = mount(buttonDemo);
+    expect(wrapper.vm.count).toBe(0)
+    const button = wrapper.find('button')
+    button.trigger('click')
+    expect(wrapper.vm.count).toBe(1)
   })
-
-  // test('renders correctly', () => {
-  //   const wrapper = mount(Component)
-  //   expect(wrapper.element).toMatchSnapshot()
-  // })
 })

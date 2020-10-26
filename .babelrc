@@ -6,7 +6,7 @@
   "plugins": ["@vue/babel-plugin-jsx","@babel/plugin-transform-runtime"],
   "env": {
     "test": {
-      "presets": [["env", { "targets": { "node": "current" } }]]
+      "presets": [["@babel/preset-env", { "targets": { "node": "current" ,"esmodules": true } }]]
     }
   }
 }

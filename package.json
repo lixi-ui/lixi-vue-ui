@@ -68,7 +68,7 @@
     "uppercamelcase": "^3.0.0",
     "url-loader": "^4.1.1",
     "vue": "^2.6.12",
-    "vue-jest": "^3.0.6",
+    "vue-jest": "^4.0.0-beta.2",
     "vue-loader": "^15.9.3",
     "vue-router": "^3.4.5",
     "vue-template-compiler": "^2.6.12",
